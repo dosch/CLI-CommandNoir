@@ -11,7 +11,8 @@ commando (of elk ander commando), kun je het commando
 
 $ man ls
 
-Een lezer zal je de `manual page` laten zien, je kunt de lezer verlaten door op `q` te drukken.
+Er opent een scherm met uitleg over het commando.
+Scroll met de pijltjestoetsen en druk op `q` om terug te gaan.
 
 Probeer nu:
 
