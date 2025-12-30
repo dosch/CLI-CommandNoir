@@ -24,5 +24,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Local Claude settings (keep only if needed)
-# .claude/settings.local.json
+# Local Claude settings and documentation
+.claude/
+CLAUDE.md
