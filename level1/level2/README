@@ -5,12 +5,12 @@
           dat ik haar kan vinden. Laten we haar gaan halen!
 
 .-----=============================-----.
-als je deze directory lijst, zul je zien
-dat er een script is gekleurd in groen.
-je OSX terminal kleurt programma's die
-kunnen worden uitgevoerd groen. Om een
-programma in de huidige directory uit te
-voeren, typ je:
+als je hier `ls` typt, zul je zien dat
+er een script is dat groen gekleurd is.
+Je terminal kleurt programma's die je
+kunt uitvoeren groen. Om een programma
+in de huidige directory uit te voeren,
+typ je:
 
 $ ./naam-van-programma
 

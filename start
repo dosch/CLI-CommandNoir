@@ -19,10 +19,10 @@ de `cat` zal het aan je laten zien.
 Het speelveld van dit spel bestaat uit een boom van
 directories, elk met een paar personages met hun eigen verhaal.
 
-Alle commando's in de terminal kunnen worden gevolgd door
-parameters, elk heeft een zak met trucjes toegankelijk via
-parameters. Bijvoorbeeld, `cat` neemt als eerste parameter
-de naam van het bestand dat je wilt bekijken. Probeer:
+Alle commando's in de terminal kun je extra opties meegeven.
+Elk commando heeft handige trucjes die je kunt gebruiken.
+Bijvoorbeeld, `cat` kun je de naam van een bestand meegeven
+dat je wilt bekijken. Probeer:
 
 $ cat moving-around
 
