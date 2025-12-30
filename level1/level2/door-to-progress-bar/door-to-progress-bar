@@ -3,7 +3,7 @@ import json
 import socket
 import os
 
-__SKULL__ ='''
+__SKULL__ = r'''
                        .ed"""" """$$$$be.
                      -"           ^""**$$$e.
                    ."                   '$$$c

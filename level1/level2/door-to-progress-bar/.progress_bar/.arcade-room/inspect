@@ -9,11 +9,9 @@ echo " > ^ < "
 echo
 echo "SARA! WAAR BEN JE!? KAN JE ME HOREN!?"
 
-# Play audio using mpg123 or aplay (install with: sudo apt-get install mpg123)
-if command -v mpg123 > /dev/null 2>&1; then
-    mpg123 -q ../.media/scream.wav &
-elif command -v aplay > /dev/null 2>&1; then
-    aplay ../.media/scream.wav &
+# Play WAV audio using aplay (standard on most Linux systems)
+if command -v aplay > /dev/null 2>&1; then
+    aplay -q ../.media/scream.wav &
 fi
 
 echo
