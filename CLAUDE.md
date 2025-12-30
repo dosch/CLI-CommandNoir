@@ -6,6 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Command Noir is an interactive CLI-based educational game that teaches command line skills through a noir detective narrative. Players navigate a directory tree, solving puzzles by executing bash/Python scripts and learning Unix commands.
 
+**🇳🇱 Deze versie is volledig in het Nederlands** (commando namen blijven Engels, want dat zijn echte Unix commando's).
+
+**Repositories:**
+- GitHub: `git@github.com:dosch/CLI-CommandNoir.git`
+- Forgejo: `ssh://forgejo@git.pondr.nl:2222/douwe/CLI-CommandNoir.git`
+
 ## Game Architecture
 
 ### Directory Structure Pattern
@@ -34,13 +40,13 @@ The game follows a nested directory tree structure where:
 - Uses stateful tracking (`.tries` JSON file) to count player attempts
 - Progressive difficulty with multi-step authentication (3 attempts → IP address challenge)
 - On success, renames hidden `.progress_bar` directory to `progress_bar` (unlocking mechanic)
-- macOS-specific audio playback using `afplay` command
-- Python 2 syntax (raw_input, print statements without parentheses, old except syntax)
+- Linux audio playback using `mpg123` command (with fallback to `aplay`)
+- Python 3 syntax (`print()`, `input()`, `except E as e:`)
 
 **Teaching Progression**:
 - Level 1: Basic navigation (`ls`, `cd`, `cat`, `man`)
 - Level 2a (park): File inspection (`file`), permissions (`chmod u+x`)
-- Level 2b (Progress Bar): Python execution, package management (`brew`, `pip`), networking (`nmap`, `ping`, `traceroute`)
+- Level 2b (Progress Bar): Python execution, package management (`apt-get`, `pip3`), networking (`nmap`, `ping`, `traceroute`)
 
 ### Python Version Note
 
@@ -99,7 +105,7 @@ When adding new puzzle rooms, follow the established pattern:
 1. Create narrative README with ASCII art character
 2. Include directional hints: `[forward>> next action]` and `[<<back previous action]`
 3. For executable puzzles:
-   - Add shebang (`#!/usr/bin/env python` or `#!/bin/bash`)
+   - Add shebang (`#!/usr/bin/env python3` or `#!/bin/bash`)
    - Include ASCII art for visual feedback
    - Use state files (JSON) for multi-attempt puzzles
    - Provide hints after failures
