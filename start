@@ -1,0 +1,29 @@
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+█░░║║║╠─║─║─║║║║║╠─░░█
+█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+
+Goed gedaan met het gebruik van het `cat` commando.
+Je bent op weg om een CLI ninja te worden!
+
+Het commando `cat` laat je de inhoud van een bestand bekijken.
+Word vrienden met de `cat`, hij zal je helpen in dit avontuur.
+Je kunt de `cat` vertellen welk bestand je wilt lezen en
+de `cat` zal het aan je laten zien.
+
+ /\_/\
+( o.o )  - in tegenstelling tot andere katten, doe ik wat je vraagt!
+ > ^ <
+
+Het speelveld van dit spel bestaat uit een boom van
+directories, elk met een paar personages met hun eigen verhaal.
+
+Alle commando's in de terminal kunnen worden gevolgd door
+parameters, elk heeft een zak met trucjes toegankelijk via
+parameters. Bijvoorbeeld, `cat` neemt als eerste parameter
+de naam van het bestand dat je wilt bekijken. Probeer:
+
+$ cat moving-around
+
+[volgende>> ga naar `moving-around`]

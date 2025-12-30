@@ -1,0 +1,30 @@
+
+
+  ,~~~.            vorige week kwam een bebaarde Tor ontwikkelaar
+  [_ _]             de Progress Bar binnen en vroeg om een craft ale.
+  |   |
+  |   |            ¯\_(ツ)_/¯  - we doen hier niet aan home brews,
+,' _   `.                        we hebben wel het beste import spul
+|`={_}='|
+|   _   |          de gast werd gek, begon Death Cab for Cutie liedjes
+|_," "._|          te zingen en begon tafels om te gooien
+|biertje|                                              (╯°□°）╯︵ ┻━┻
+|-.___,-|          mijn gasten waren doodsbang
+|       |
+|       |            (Ͼ˳Ͽ) (๏_๏) (Ͼ˳Ͽ)    WTF!!?
+`--===--'
+
+sindsdien gebruik ik een package manager om mijn tools te installeren.
+
+Op Debian/Raspberry Pi gebruik je `apt-get` om software te installeren.
+Eerst moet je de package lijst updaten:
+
+# sudo apt-get update
+
+Dan kun je elke package installeren met:
+
+# sudo apt-get install <package-naam>
+
+
+[volgende>> praat met `the-gang-of-two` om te leren welke packages je nodig hebt]
+.

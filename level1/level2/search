@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+echo " /\_/\ "
+echo "( o.o )  - miauw miaaaauw! "
+echo " > ^ < "
+
+# Use espeak for text-to-speech on Linux (install with: sudo apt-get install espeak)
+if command -v espeak > /dev/null 2>&1; then
+    espeak -v nl "De laatste keer dat ik haar zag had ze haar hardloopkleren aan. Wil je me alsjeblieft helpen haar te vinden?" 2>/dev/null
+fi
+
+echo
+echo
+echo "[volgende>> als je Sara wilt vinden ga naar het \`park\`]    [terug>> blijf thuis en verhonger]"

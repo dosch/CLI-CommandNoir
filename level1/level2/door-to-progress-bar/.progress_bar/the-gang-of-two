@@ -1,0 +1,22 @@
+
+ /\_/\       we gaan zwaardere tools nodig hebben voor
+( o.o )  - de uitdagingen die komen... maar met `apt-get` kunnen
+ > ^ <       we alles krijgen wat we nodig hebben gratis!
+
+apt-get is de package manager voor Debian/Raspberry Pi.
+Het laat je nuttige software installeren
+om te hacken op interessante dingen.
+
+Je kunt elk package installeren door te typen:
+
+$ sudo apt-get install <package-naam>
+
+Laten we twee interessante packages installeren:
+
+$ sudo apt-get install nmap
+$ sudo apt-get install wget
+
+Optioneel voor audio (als je geluid wilt horen):
+$ sudo apt-get install mpg123 espeak
+
+[volgende>> installeer `nmap` en `wget` en neem dan één van de deuren]

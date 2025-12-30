@@ -1,0 +1,12 @@
+Kijk of we verbinding hebben met de buitenwereld door een
+server van iemand anders te `pingen`, bijvoorbeeld Google:
+
+$ ping google-public-dns-a.google.com
+
+Pingen is een manier om erachter te komen of een computer
+leeft en luistert in het netwerk.
+
+Druk op `Control C` om te stoppen met pingen.
+
+[volgende>> lees `tracing-networks`]
+.

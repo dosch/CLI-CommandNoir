@@ -1,0 +1,33 @@
+
+
+
+\    /\    dit is heel vreemd, ze komt altijd thuis om te douchen
+ )  ( ')  /   na haar hardlooprondjes, het is niets voor haar om direct naar de Progress Bar te gaan
+(  /  )
+ \(__)|
+
+
+Ik heb allerlei verhalen
+gehoord over de Progress Bar
+je moet 1337 zijn om binnen te komen.
+
+Je kunt beter je command line vaardigheden
+oppoetsen, anders is dit het einde van onze zoektocht.
+
+Onthoud:
+
+$ file een-bestandsnaam
+
+Geeft je een hint over de inhoud van
+elk bestand dat je het geeft.
+
+Om een script uitvoerbaar te maken, gebruik je het
+commando `chmod`, en je kunt jezelf het recht
+geven om het uit te voeren door het `u+x`
+rechten te geven, zo:
+
+$ chmod u+x een-script-bestandsnaam
+
+
+
+[volgende>> ga naar de `progress bar`]      [terug>> blijf apporteren met hound]

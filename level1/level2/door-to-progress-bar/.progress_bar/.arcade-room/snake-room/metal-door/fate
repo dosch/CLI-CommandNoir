@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""
+Lot & Fortuin SMS.
+
+Gebruik:
+  fate <jouw_mobiele_nummer> [--password=<pwd>]
+  fate -h | --help
+
+  De enige parameter is je telefoonnummer voorafgegaan door de internationale
+  kiescode +31 voor Nederland.
+
+Opties:
+  -h --help              Toon dit scherm.
+  -p --password=<pw>     Geef wachtwoord.
+"""
+from twilio.rest import Client
+from docopt import docopt
+import json
+from SimpleAES import SimpleAES  # military-grade bollocks!
+import getpass
+
+secret = """U2FsdGVkX1/x279RLQGfXryW2TiS01Mhlf7A2B7QoHQ1HSZd0IlBKbUaC4D9Pd8p\nJuHOKlM03ofoMQLTtxi50zO6wnRFASFA6DZ2J0e8llVk1uIi7A5MVprM5qblXCI4\nhHbr47inbe73zesmc+/n2MYcNSTLahegtdS+hSu8wM4="""
+
+def decrypt_secret(passphrase="Haven't got a clue"):
+    try:
+        aes = SimpleAES(passphrase)
+        dekret = aes.decrypt(secret)
+        return json.loads(dekret)
+    except Exception as e:
+        print("(!!!) Verdomme! Dat was niet het juiste wachtwoord! Snel! Laten we geen kostbare tijd verspillen! Probeer opnieuw.")
+
+def send_sms_to(mobile, sid, token):
+    try:
+        client = Client(sid, token)
+        myTwilioNumber = '+31852080387'
+        msgtext = "Geef op of je zult nooit meer Whiskas eten! Stop je zoektocht! De .server-room is verborgen"
+        print("Stuur nu een sms naar", mobile)
+        message = client.messages.create(body=msgtext, from_=myTwilioNumber, to=mobile)
+    except Exception as e:
+        print()
+        print("Verzenden van de SMS mislukt, waarschijnlijk heeft Luis geen tegoed meer op zijn SMS account")
+        print()
+        print("Dit is wat de SMS zei:")
+        print()
+        print(msgtext)
+        print()
+        print("="*77)
+
+if __name__ == '__main__':
+    arguments = docopt(__doc__, version='Fate')
+    #print(arguments)
+
+    if ('--password' in arguments) and (arguments['--password']):
+        pw = arguments['--password']
+    else:
+        pw = getpass.getpass(prompt='Voer het gedeelde geheim in: ')
+
+    cred = decrypt_secret(pw)
+
+    if cred and ('<your_mobile_number>' in arguments):
+        send_sms_to(arguments['<your_mobile_number>'], cred['accountSID'], cred['authToken'])

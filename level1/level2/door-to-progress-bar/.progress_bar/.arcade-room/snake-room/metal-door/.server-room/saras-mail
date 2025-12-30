@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -gt 0 ]; then
+  echo "Sara heeft een email gestuurd naar dit adres $1"
+  cat .mailtxt | mail -s "lieve kat" $1
+else
+    echo "Gebruik: saras-mail <jouw@email-adres.tld>"
+fi

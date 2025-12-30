@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo
+echo
+echo
+echo " /\_/\ "
+echo "( O.o )  - OMG! Dat is Sara! "
+echo " > ^ < "
+echo
+echo "SARA! WAAR BEN JE!? KAN JE ME HOREN!?"
+
+# Play audio using mpg123 or aplay (install with: sudo apt-get install mpg123)
+if command -v mpg123 > /dev/null 2>&1; then
+    mpg123 -q ../.media/scream.wav &
+elif command -v aplay > /dev/null 2>&1; then
+    aplay ../.media/scream.wav &
+fi
+
+echo
+echo "[volgende>> de schreeuw kwam uit de \`snake-room\`]    [terug>> wat!? ben je nu bang?]"
+echo

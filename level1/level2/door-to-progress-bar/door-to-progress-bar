@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+import json
+import socket
+import os
+
+__SKULL__ ='''
+                       .ed"""" """$$$$be.
+                     -"           ^""**$$$e.
+                   ."                   '$$$c
+                  /                      "4$$b
+                 d  3                     $$$$
+                 $  *                   .$$$$$$
+                .$  ^c           $$$$$e$$$$$$$$.
+                d$L  4.         4$$$$$$$$$$$$$$b
+                $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$
+    e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
+   z$$b. ^c     3$$$F "$$$$b   $"$$$$$$$  $$$$*"      .=""$c
+  4$$$$L   \     $$P"  "$$b   .$ $$$$$...e$$        .=  e$$$.
+  ^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$
+    "**$$$ec   "\   %ce""    $$$  $$$$$$$$$$*    .r" =$$$$P""
+          "*$b.  "c  *$e.    *** d$$$$$"L$$    .d"  e$$***"
+            ^*$$c ^$c $$$      4J$$$$$% $$$ .e*".eeP"
+               "$$$$$$"'$=e....$*$$**$cz$$" "..d$*"
+                 "*$$$  *=%4.$ L L$ P3$$$F $$$P"
+                    "$   "%*ebJLzb$e$$$$$b $P"
+                      %..      4$$$$$$$$$$ "
+                       $$$e   z$$$$$$$$$$%
+                        "*$c  "$$$$$$$P"
+                         ."""*$$$$$$$$bc
+                      .-"    .$***$$$"""*e.
+                   .-"    .e$"     "*$c  ^*b.
+            .=*""""    .e$*"          "*bc  "*$e..
+          .$"        .z*"               ^*$e.   "*****e.
+          $$ee$c   .d"                     "*$.        3.
+          ^*$E")$..$"                         *   .ee==d%
+             $.d$$$*                           *  J$$$e*
+              """""                             "$$$"
+'''
+
+__ATTEMPT1__ = '''
+               .---------------====--------------.
+               | vergeet het maar, je komt er    |
+               | niet in de Progress Bar [...]   |
+               '---------------====--------------'
+'''
+
+__ATTEMPT2__ = '''
+               .---------------====--------------.
+               | Ik zei toch dat je het moest    |
+               | vergeten! stomme kittenpoes!    |
+               '---------------====--------------'
+'''
+
+__ATTEMPT3__ = '''
+               .---------------====--------------.
+               | ok! slimme kat! alleen hackers  |
+               | komen de Progress Bar binnen,   |
+               | als je me je IP adres geeft dan |
+               | laat ik je misschien binnen...  |
+               '---------------====--------------'
+'''
+
+
+def save_tries(count):
+    d = {'tries' : count}
+    with open('.tries', 'w') as outfile:
+        json.dump(d, outfile)
+        outfile.close()
+
+def get_local_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(('8.8.8.8', 53))  # connecting to a UDP address doesn't send packets
+    return s.getsockname()[0]
+
+def unlock_progress_bar():
+    # unlock the secret door
+    try:
+        if not os.path.exists('progress_bar'):
+            os.rename('.progress_bar', 'progress_bar')
+    except OSError as e:
+        pass
+    finally:
+        print("")
+        print("Deur naar de Progress Bar is ontgrendeld!")
+        print("")
+        print("[volgende>> ga naar binnen `progress-bar`]")
+        print("")
+    # play some music in the background
+    import subprocess
+    audio_file = "progress_bar/.media/nothing_is_true.mp3"
+    # Use mpg123 for Linux (install with: sudo apt-get install mpg123)
+    try:
+        return_code = subprocess.Popen(["mpg123", "-q", audio_file])
+    except FileNotFoundError:
+        # If mpg123 not installed, silently continue
+        pass
+
+if __name__ == '__main__':
+    print(__SKULL__)
+    if os.path.isfile('.tries'):
+        with open('.tries') as jsonf:
+            d = json.loads(jsonf.read())
+            if d['tries'] == 1:
+                text = __ATTEMPT2__
+                save_tries(2)
+            if d['tries'] == 2:
+                text = __ATTEMPT3__
+                save_tries(3)
+            if d['tries'] == 3:
+                ip_in = input("Voer je IP adres in of zwijg voor altijd: ")
+                local_ip_address = get_local_ip()
+                if ip_in == local_ip_address:
+                    text = ""
+                    print("""
+                    .---------------====--------------.
+                      Ok! Meneer Bojangles! Welkom in
+                      de Progress Bar.
+
+                      Je eigen ballen likken is hier
+                      niet toegestaan! HA HA HA!
+                    '---------------====--------------'
+                    """)
+                    unlock_progress_bar()
+                else:
+                    text = """
+                    .---------------====--------------.
+                      Je zou jezelf niet uit een
+                      papieren zak kunnen hacken
+                      kittenpoes!!!
+
+                      Ga terug naar huis en kom
+                      nooit meer terug!
+                    '---------------====--------------'
+                    """
+
+    else:
+        text = __ATTEMPT1__
+        save_tries(1)
+
+    print(text)
+
+    # print("Enter a file name:", end="")
+    # filename = input()

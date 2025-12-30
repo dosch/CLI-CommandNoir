@@ -1,0 +1,39 @@
+
+.-------------=====--------------.
+   Raspberry Pi heeft Python 3
+   standaard geïnstalleerd.
+
+   Om extra Python libraries te
+   installeren heb je `pip3` nodig,
+   de Python package installer.
+
+   Om systeem-dingen te installeren
+   moet je `super user` worden.
+   Dat is de gebruiker op je computer
+   die riskante dingen mag doen.
+
+   Je doet dat door elk risicovol
+   commando vooraf te laten gaan met
+   het commando `sudo` (do as `super user`).
+
+   Installeer eerst pip3 als je het
+   nog niet hebt:
+
+   $ sudo apt-get install python3-pip
+
+   Gebruik `pip3` om Python libraries
+   te installeren die je nodig hebt:
+
+   $ pip3 install requests
+   $ pip3 install twilio
+   $ pip3 install pillow
+   $ pip3 install docopt
+   $ pip3 install lxml
+   $ pip3 install nltk
+   $ pip3 install SimpleAES
+
+   (sqlite is standaard in Python 3)
+'-------------=====--------------'
+
+[volgende>> installeer alle `voorgestelde python libraries`]
+.

@@ -1,0 +1,9 @@
+We kunnen elke computer op het Internet traceren en hoe we er moeten komen door het
+`traceroute` commando te gebruiken:
+
+$ traceroute <IP of domeinnaam van server>
+
+Controleer de route van je computer naar de website
+van een grote krant in je land.
+
+[volgende>> controleer de route naar `www.volkskrant.nl`]

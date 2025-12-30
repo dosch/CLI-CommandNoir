@@ -1,0 +1,23 @@
+
+ /\_/\     Sara is al uren weg.
+( o.o )   Ik heb zo'n honger, ik zou een bank kunnen opeten!
+ > ^ <      [...] Ik kan het park vanuit dit raam zien, ik weet zeker
+          dat ik haar kan vinden. Laten we haar gaan halen!
+
+.-----=============================-----.
+als je deze directory lijst, zul je zien
+dat er een script is gekleurd in groen.
+je OSX terminal kleurt programma's die
+kunnen worden uitgevoerd groen. Om een
+programma in de huidige directory uit te
+voeren, typ je:
+
+$ ./naam-van-programma
+
+Probeer het `search` script uit te voeren
+door te typen:
+
+$ ./search
+'-----=============================-----'
+
+[volgende>> voer script `search` uit]

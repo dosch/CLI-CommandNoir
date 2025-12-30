@@ -1,0 +1,24 @@
+
+\    /\     oh! Dit is de Progress Bar server kamer,
+ )  ( ')  /  we zijn nu in business. we hebben toegang tot
+(  /  )      alles vanaf hier.
+ \(__)|
+
+Misschien kun je het netwerk nmappen om te zien wie er is. Gebruik:
+
+$ nmap -sP <jouw subnet>
+
+Zoek uit wie wie is:
+
+ ___   _      ___   _      ___   _      ___   _      ___   _
+[(_)] |=|    [(_)] |=|    [(_)] |=|    [(_)] |=|    [(_)] |=|
+ '-`  |_|     '-`  |_|     '-`  |_|     '-`  |_|     '-`  |_|
+/mmm/  /     /mmm/  /     /mmm/  /     /mmm/  /     /mmm/  /
+      |____________|____________|____________|____________|
+                         |            |            |
+                     ___  \_      ___  \_      ___  \_
+                    [(_)] |=|    [(_)] |=|    [(_)] |=|
+                     '-`  |_|     '-`  |_|     '-`  |_|
+                    /mmm/        /mmm/        /mmm/
+
+[volgende>> lees `connection-to-the-outside-world`]

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash -n /Users/douwe/Downloads/CLI-CommandNoir-master/level1/level2/door-to-progress-bar/.progress_bar/.arcade-room/snake-room/metal-door/.server-room/saras-mail)",
+      "Bash(git init:*)"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+───────────────▄▄───▐█
+───▄▄▄───▄██▄──█▀───█─▄
+─▄██▀█▌─██▄▄──▐█▀▄─▐█▀
+▐█▀▀▌───▄▀▌─▌─█─▌──▌─▌
+▌▀▄─▐──▀▄─▐▄─▐▄▐▄─▐▄─▐▄
+
+Het `ls` commando dat je in het vorige level gebruikte kan
+véééél parameters aannemen. Om meer te leren over het `ls`
+commando (of elk ander commando), kun je het commando
+`man` gebruiken (kort voor manual).
+
+$ man ls
+
+Een lezer zal je de `manual page` laten zien, je kunt de lezer verlaten door op `q` te drukken.
+
+Probeer nu:
+
+$ ls -lA
+
+Soms kan je terminal scherm een beetje rommelig worden
+als het zich vult met tekst. Om het scherm te wissen
+houd je gewoon de `ctrl toets` ingedrukt en druk je op
+`l`. Dit zal je terminal wissen.
+
+ctrl+l
+
+[volgende>> lees `hello`]

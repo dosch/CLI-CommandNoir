@@ -1,0 +1,20 @@
+Om op en neer door deze directories te bewegen
+gaan we het `cd` commando gebruiken. `cd` is
+kort voor "change directory", je volgt het commando
+met de naam van de directory waar je naartoe wilt.
+
+$ cd level1
+
+Om één niveau terug te gaan, is er een speciale
+directory genaamd `..` die je daar brengt
+door te typen.
+
+$ cd ..
+
+Je kunt het `ls` commando gebruiken om te zien
+wat er in de huidige directory staat wanneer
+je maar wilt.
+
+Nu is een goed moment.
+
+[volgende>> verander naar `level1`]
